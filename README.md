@@ -18,7 +18,7 @@ This repository is my personal portfolio site. It is deliberately built as a **h
 of Object-Oriented Programming and Test-Driven Development**, not just a page with links: the projects,
 courses and skills shown on the site are modelled as TypeScript classes and covered by unit tests.
 
-<!-- Live demo: add the deployed URL here once this version is published. -->
+**Live Demo:** https://ivkoff-react-portfolio.netlify.app/
 
 ---
 
