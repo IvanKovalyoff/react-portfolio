@@ -1,0 +1,170 @@
+{
+  "meta": {
+    "title": "Ivan Kovalov — Full-Stack Developer (React, Next.js, Node.js)",
+    "description": "Portfolio: Ivan Kovalov — Full-Stack Developer (React, Next.js, TypeScript, Node.js), który zmienił branżę z przetwórstwa mięsnego. 8 ukończonych projektów, Polska."
+  },
+  "projects": {
+    "landingPage": {
+      "name": "Strona Landing Page HTML+SCSS",
+      "description": "To jeden z moich pierwszych projektów, stworzony z wykorzystaniem struktury HTML oraz stylizacji SCSS strony internetowej. Stworzenie tego projektu dało mi inspirację do dalszego rozwoju i stało się realną wizualizacją pierwszej zdobytej wiedzy."
+    },
+    "game2048": {
+      "name": "Gra 2048",
+      "description": "Dla mnie był to dość wymagający projekt, który pokazał moc JavaScript i jego niezbędność w tworzeniu logiki aplikacji. Pomógł odkryć „kulisy” pozornie prostej gry 2048, do stworzenia której potrzebne są naprawdę solidne umiejętności pracy z narzędziami JavaScript."
+    },
+    "gadgetStore": {
+      "name": "Gadget-Store",
+      "description": "Kompletny projekt frontendowy sklepu internetowego z gadżetami mobilnymi, na który poświęciłem mnóstwo czasu — ale dzięki niemu odkryłem też mnóstwo nowych narzędzi i niesamowitą „magię” frameworka React."
+    },
+    "chatAppInitialAttempt": {
+      "name": "Chat-app",
+      "description": "Ten projekt był zaplanowany jako aplikacja do komunikacji w czasie rzeczywistym, łącząca frontend oparty na React + TypeScript + Zustand + TailwindCSS z backendem zbudowanym za pomocą Node.js + Socket.IO + JWT + PostgreSQL. W tamtym czasie był to na tyle trudny i rozbudowany projekt z dużą liczbą nowych technologii, że musiałem odłożyć jego realizację na jakiś czas, chcąc lepiej opanować używane technologie."
+    },
+    "tailwindFestival": {
+      "name": "TW:MF — Music Festival Website",
+      "description": "Dzięki temu projektowi odkryłem, jak szybka i prosta może być stylizacja za pomocą TailwindCSS, co dało mi szersze zrozumienie tej technologii i pomogło pewniej z niej korzystać w przyszłości."
+    },
+    "brogram": {
+      "name": "Brogram",
+      "description": "Ten projekt pomógł mi pogłębić wiedzę i wyćwiczyć umiejętności w React. A sam pomysł na zbudowanie realnie użytecznej aplikacji, korzystając tylko z frontendu, jest naprawdę fajny."
+    },
+    "ivkoffStore": {
+      "summary": "Sklep internetowy z płatnościami Stripe i e-mailami o zamówieniach wysyłanymi przez Resend.",
+      "name": "IvKoff-Store",
+      "description": "Ten niesamowity projekt był moim pierwszym kontaktem z frameworkiem NextJS, który z jakiegoś powodu wcześniej mnie onieśmielał — być może dlatego, że samo poznawanie React było już niemałym wyzwaniem. Ale gdy zrozumiałem, że ten framework jest rozszerzoną i ulepszoną kontynuacją React, udało mi się stworzyć ten świetny projekt i poszerzyć listę technologii, które naprawdę ułatwiają i wspierają rozwój."
+    },
+    "expenny": {
+      "summary": "Aplikacja do śledzenia subskrypcji zbudowana w Next.js i Firebase, z animacjami GSAP.",
+      "name": "Expenny",
+      "description": "Ten projekt pomógł mi utrwalić i poszerzyć wiedzę o NextJS, a także nauczył mnie pracy z nową bazą danych, Firebase — co naprawdę pozytywnie wpłynęło na podniesienie mojego poziomu jako developera."
+    },
+    "chatAppCompleted": {
+      "summary": "Czat full-stack w czasie rzeczywistym: logowanie przez JWT i Google OAuth, trwała historia wiadomości i wskaźniki pisania na żywo.",
+      "name": "Chat-app",
+      "description": "To bez wątpienia mój najtrudniejszy i najbardziej ambitny projekt, i ten, z którego dzisiaj jestem najbardziej dumny. Starałem się tu wykorzystać maksimum wiedzy zdobytej z kilku źródeł i w końcu zamienić ją w działający projekt. Nie jest jeszcze w pełni zorientowany na użytkownika, ale ma świetny potencjał do dalszego rozwoju i wykorzystania."
+    }
+  },
+
+  "courses": {
+    "frontEnd": {
+      "title": "Front-End Developer",
+      "introduction": "Ten kurs był pierwszym krokiem w cyfrowy świat programowania. Dla mnie stał się kluczem do nowego „cyfrowego wszechświata”, pełnego niespodziewanych możliwości i trudności.",
+      "conclusion": "Dzięki temu kursowi postawiłem pierwsze kroki w świecie programowania. Pomógł mi zbudować solidną bazę do dalszego rozwoju w tym kierunku. Kurs wciąż nie jest ukończony — dzięki staraniom zespołu Mate Academy, który nadąża za rozwojem technologii, jest on stale poszerzany, dzięki czemu nic istotnego ze świata developmentu nie zostaje pominięte."
+    },
+    "fullStackMate": {
+      "title": "Full-Stack Developer",
+      "introduction": "To był główny kurs, który chciałem opanować — oczywiście bardzo szeroki kierunek, obejmujący także Front-End development. Dlatego nauka tego kursu była poszerzeniem mojego potencjału jako developera.",
+      "conclusion": "Ucząc się na tym kursie, odkryłem stronę back-endową web developmentu, zrozumiałem skrypty konfiguracji środowiska i działanie Node.js, a także pogłębiłem wiedzę o programowaniu z użyciem OOP i TDD. Ten kurs również nie jest jeszcze ukończony — obejmuje kilka tematów, których jeszcze nie przerobiłem, i jest stale aktualizowany przez zespół Mate Academy, dzięki czemu studenci zawsze mają dostęp do najbardziej aktualnych materiałów."
+    },
+    "tailwind": {
+      "title": "Tailwind CSS v4 — od początkującego do profesjonalisty, kurs Toma Phillipsa",
+      "introduction": "Dowiedziałem się o tym kursie na platformie edukacyjnej Udemy. Czytając jego opis, zrozumiałem, że jest mi potrzebny, aby opanować nową, często wykorzystywaną w nowoczesnych projektach technologię stylizacji — Tailwind CSS.",
+      "conclusion": "Po ukończeniu kursu byłem zadowolony — naprawdę pomógł mi opanować nową technologię i przyspieszyć proces developmentu. Więc ⭐⭐⭐⭐⭐ dla tego kursu i dla Toma Phillipsa."
+    },
+    "smoljames": {
+      "title": "Full Stack Course | Build & Deploy, kurs Jamesa McArthura",
+      "introduction": "Ten kurs również znalazłem na Udemy. Z jego opisu zrozumiałem, że dzięki niemu nie tylko wzmocnię swoje portfolio, ale też poznam nowy framework oraz całą gamę nowych usług i technologii.",
+      "conclusion": "Ten kurs naprawdę przekroczył moje oczekiwania — przejrzysty sposób prowadzenia Jamesa McArthura pomógł mi uporządkować już zdobytą wiedzę i zdobyć nową. Więc ⭐⭐⭐⭐⭐ dla tego kursu i dla Jamesa McArthura."
+    },
+    "fullStackMateResolved": {
+      "title": "Full-Stack Developer w Mate Academy",
+      "introduction": "Po chwili przerwy, uporządkowaniu i poszerzeniu swojej wiedzy wróciłem do najtrudniejszego, odłożonego projektu — pewny, że tym razem go ukończę.",
+      "conclusion": "Ukończenie tego projektu potwierdziło, że wiedza i praktyka zdobyte w Mate Academy są kluczem do osiągania wyznaczonych celów."
+    },
+    "nextjsAdvanced": {
+      "title": "React + NextJS — zaawansowany web development w praktyce, kurs Aleksandra Borkuna",
+      "introduction": "Ten kurs, znaleziony na Udemy, obiecuje pogłębienie i udoskonalenie umiejętności React + NextJS, co jest dla mnie priorytetem w utrwalaniu mojego stacku.",
+      "conclusion": ""
+    }
+  },
+
+  "complexCourses": {
+    "mateAcademy": {
+      "title": "Mate Academy",
+      "introduction": "Po ostatecznej decyzji, by całkowicie zmienić swoje życie... wyznaczeniu celów i kierunku... rozpocząłem naukę w Mate Academy, wierząc, że mogę zostać Full-Stack developerem. I tak zacząłem tę niełatwą drogę, odkrywając ten nowy i niemal magiczny świat web developmentu.",
+      "conclusion": "Nauka w Mate Academy dała mi naprawdę solidną bazę wiedzy i umiejętności, bez której mój dalszy rozwój po prostu nie byłby możliwy. Patrząc teraz, jak zespół Mate Academy nadąża za błyskawicznym rozwojem technologii, stale aktualizując i ulepszając swój program, nie mogę nie postawić ⭐⭐⭐⭐⭐ za całą ich pracę i osiągnięcia."
+    }
+  },
+
+  "myProjects": {
+    "liveLabel": "Na żywo",
+    "githubLabel": "GitHub",
+    "progressLabel": "Ukończono {{progress}}%",
+    "inProgress": "Brak projektów — kurs w trakcie.",
+    "futurePlansTitle": "Co dalej",
+    "featuredTitle": "Wyróżnione projekty",
+    "featuredIntro": "Moje trzy najbardziej kompletne projekty, które najlepiej pokazują moje umiejętności. Oś czasu poniżej pokazuje drogę, jaką przeszedłem, aby je stworzyć.",
+    "timelineTitle": "Moja ścieżka nauki",
+    "screenshotAlt": "Zrzut ekranu projektu {{name}}"
+  },
+
+  "studyingProcess": {
+    "futurePlans": "W przyszłości planuję pogłębić wiedzę z zakresu backendu i nauczyć się frameworka NestJS dzięki rozszerzonemu kursowi Backend, który obejmuje następujące kursy z Udemy: 1. \"Master Node JS & Deno.js, build REST APIs with Node.js, GraphQL APIs, add Authentication, use MongoDB, SQL & much more!\" autorstwa Academind (Maximilian Schwarzmüller). 2. \"Build full featured backend APIs incredibly quickly with Nest, TypeORM, and Typescript. Includes testing and deployment!\" autorstwa Stephena Gridera. 3. \"REST API vs GraphQL vs gRPC - The Complete Guide\" autorstwa Memiego Laviego. Następnie przećwiczę i poszerzę umiejętności TDD na kursach \"Testing Next.js Apps with Jest, Testing Library and Cypress\" autorstwa Bonnie Schulkin oraz \"Learn Playwright, Cypress, Puppeteer, TestCafe and Taiko side by side — Cursor, AI agents and Playwright MCP.\" autorstwa Kaniela Outisa. Potem wrócę do frontendu w Mate Academy, aby ukończyć moduły VueJS i Angular."
+  },
+
+  "game": {
+    "playPrompt": "Zagrać?",
+    "countdown": "Przygotuj się... {{seconds}}",
+    "themeTimeLeft": "Zostało {{seconds}}s na decyzję",
+    "applyTheme": "Zastosuj ten motyw",
+    "reset": "Resetuj",
+    "cooldown": "Spróbuj ponownie za kilka minut",
+    "cooldownNotification": "Spróbuj ponownie za {{minutes}} min {{seconds}} s lub odśwież stronę"
+  },
+
+  "header": {
+    "logoAlt": "Logo IvKoff web-development",
+    "toggleMenu": "Przełącz menu nawigacji",
+    "skipToContent": "Przejdź do treści",
+    "nav": {
+      "about": "O mnie",
+      "skills": "Moje umiejętności",
+      "projects": "Moje projekty",
+      "contacts": "Kontakt"
+    }
+  },
+
+  "hero": {
+    "photoAlt": "Zdjęcie portretowe",
+    "greeting": "Cześć, jestem Ivan Kovalov.",
+    "headline": "Jestem Full-Stack Developerem (zmiana kariery).",
+    "subheadline": "Od 6 lat pracy przy linii w dużych zakładach mięsnych do budowania czatów w czasie rzeczywistym i płatności Stripe.",
+    "socials": {
+      "phone": "Telefon",
+      "email": "E-mail",
+      "github": "GitHub",
+      "linkedin": "LinkedIn"
+    }
+  },
+
+  "aboutMe": {
+    "title": "O mnie",
+    "tagline": "Od pracy w zakładzie mięsnym do pipeline'u wdrożeniowego",
+    "description": "Przez sześć lat pracowałem jako zawodowy rzeźnik — praca, która wymaga precyzji, cierpliwości i zachowania spokoju, gdy sytuacja robi się chaotyczna. Okazuje się, że to dokładnie te umiejętności, które są niezbędne przy debugowaniu stack trace'a.\n\nW 2025 roku podjąłem dla siebie ważną decyzję o zmianie kariery. Nie był to impuls — poświęciłem sporo czasu, by zrozumieć, co naprawdę chcę budować, i wybrałem programowanie. Od tego czasu spędziłem 1,5 roku w Mate Academy, a także ukończyłem dodatkowe, ukierunkowane kursy (Tailwind CSS, aplikacje webowe w czasie rzeczywistym), zamieniając tę decyzję w realny, działający kod.\n\nNa razie nie mam doświadczenia produkcyjnego. Mam za to 8 zrealizowanych projektów, które stają się coraz bardziej ambitne: zaczynając od strony typu landing page w HTML/SCSS i gry 2048, przechodząc do pełnych aplikacji React/Next.js z prawdziwymi integracjami — płatnościami Stripe, autoryzacją Firebase, animacjami GSAP — a ostatnio pełnostackowej aplikacji czatu w czasie rzeczywistym z WebSockets, PostgreSQL i OAuth, zbudowanej od podstaw.\n\nMieszkam w Polsce, jestem otwarty na pracę zdalną i szukam zespołu, który da mi pierwszą szansę robienia tego zawodowo. Uczę się szybko, kończę to, co zaczynam, i wolę pokazać kod, niż o nim opowiadać."
+  },
+
+  "skills": {
+    "title": "Moje umiejętności",
+    "categories": {
+      "languages": "Języki",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "database": "Baza danych",
+      "servicesAndApis": "Usługi i API",
+      "design": "Projektowanie",
+      "developerTooling": "Narzędzia developerskie",
+      "deploymentAndHosting": "Wdrożenie i hosting",
+      "testing": "Testowanie"
+    }
+  },
+
+  "contacts": {
+    "mapTitle": "Mapa z lokalizacją: Poznań, Polska"
+  },
+
+  "footer": {
+    "logoAlt": "Logo IvKoff web-development",
+    "description": "To portfolio powstało jako praktyczna demonstracja mojej wiedzy z zakresu programowania obiektowego (OOP) i programowania sterowanego testami (TDD) — od modelowania projektów i kursów jako klas po pokrycie ich testami jednostkowymi.",
+    "copyright": "2026 IvKoff. Wszelkie prawa zastrzeżone."
+  }
+}

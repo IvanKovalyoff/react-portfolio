@@ -1,0 +1,68 @@
+/* src/index.css */
+@import 'tailwindcss';
+
+@theme {
+  --color-bg: #ffffff;
+  --color-accent: #0084ff;
+  --color-text: #111111;
+  --font-family: 'Cutive Mono', monospace;
+}
+
+[data-theme='basic'] {
+  --color-accent: #596f7eb6;
+  --color-text: #27272a;
+  --font-family: 'Cutive Mono', monospace;
+  --gradient-accent: linear-gradient(to bottom, #c2c2c1, #413f3f);
+  --gradient-skill: linear-gradient(to bottom, #c2c2c1 0%, #f1f1ef 30%, #424141 100%);
+  --techBg-gradient: linear-gradient(to bottom, #aca9a9 0%, #dddddd 50%);
+}
+[data-theme='orange'] {
+  --color-accent: #f97316;
+  --color-text: #ffbd59;
+  --font-family: 'Skranji', cursive;
+  --gradient-accent: linear-gradient(to bottom, #f97316, #7a2f00);
+  --gradient-skill: linear-gradient(to bottom, #ff720d 0%, #faad75 30%, #cc4f02);
+  --techBg-gradient: linear-gradient(to bottom, #643102 0%, #e6984f 70%);
+}
+[data-theme='green'] {
+  --color-accent: #4ade80;
+  --color-text: #d3ff99;
+  --font-family: 'Modern Antiqua', serif;
+  --gradient-accent: linear-gradient(to bottom, #00b303, #112409);
+  --gradient-skill: linear-gradient(to bottom, #4bff03 0%, #53fc56 30%, #2d9102 100%);
+  --techBg-gradient: linear-gradient(to bottom, #024202 0%, #0f990a 70%);
+}
+[data-theme='red'] {
+  --color-accent: #ef4444;
+  --color-text: #ffc2c2;
+  --font-family: 'Nova Oval', sans-serif;
+  --gradient-accent: linear-gradient(to bottom, #ff0000, #7a0000);
+  --gradient-skill: linear-gradient(to bottom, #fa5454 0%, #f39595 30%, #fd0000 100%);
+  --techBg-gradient: linear-gradient(to bottom, #3d1717 0%, #943b3b 70%);
+}
+[data-theme='blue'] {
+  --color-accent: #3b82f6;
+  --color-text: #c2f6ff;
+  --font-family: 'Ubuntu Mono', monospace;
+  --gradient-accent: linear-gradient(to bottom, #3b82f6, #04113a);
+  --gradient-skill: linear-gradient(to bottom, #3782fa 0%, #93bcff 30%, #032fbe 100%);
+  --techBg-gradient: linear-gradient(to bottom, #1f314e 0%, #5679ec 70%);
+}
+[data-theme='purple'] {
+  --color-accent: #c026d3;
+  --color-text: #c2cdff;
+  --font-family: 'Macondo Swash Caps', cursive;
+  --gradient-accent: linear-gradient(to bottom, #9333ea, #3b0764);
+  --gradient-skill: linear-gradient(to bottom, #9333ea 0%, #cda3f5 30%, #3b0764 100%);
+  --techBg-gradient: linear-gradient(to bottom, #1b092c 0%, #9f41e7 70%);
+}
+
+html {
+  color: var(--color-text);
+  font-family: var(--font-family);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    font-family 0.3s ease;
+  scroll-behavior: smooth;
+}

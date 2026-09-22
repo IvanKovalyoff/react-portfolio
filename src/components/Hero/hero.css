@@ -1,0 +1,403 @@
+/*
+ * Hero layout
+ * -----------
+ * One shared layout for every theme; heroCompositions.ts only picks between
+ * the arrangements defined here through data-* attributes.
+ *
+ *  - .hero__stage is a size container (`container-type: size`). Everything
+ *    inside is sized in container units (cqw / cqh / cqmin), so the layout
+ *    reacts to the space the Hero really gets, not to the window.
+ *  - Photo and text are grid items that never share a cell, so they cannot
+ *    collide. Landscape stages (aspect >= 1) use two columns, portrait stages
+ *    one column of rows.
+ *  - The photo is sized from the space that is left after the text takes its
+ *    share; type is fluid (clamp) and capped by the stage height, so short
+ *    screens shrink type and photo together instead of overlapping.
+ *  - Face keep-out zones (heroFaceZones.ts) and the Playwright suite in e2e/
+ *    guard the few places where something (the socials) may touch the photo.
+ */
+
+.hero {
+  --header-h: 60px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: calc(100vh - var(--header-h));
+  height: max(calc(100svh - var(--header-h)), 17rem);
+  padding: clamp(0.5rem, 3.5svh, 1.75rem) clamp(0.5rem, 3vw, 1.75rem);
+}
+
+@media (min-width: 768px) {
+  .hero {
+    --header-h: 80px;
+  }
+}
+
+.hero__stage {
+  container: hero / size;
+  position: relative;
+  width: 100%;
+  max-width: 80rem;
+  height: 100%;
+  overflow: hidden;
+  background-position: center;
+  background-size: cover;
+}
+
+/* ---------- shared: spacing tokens, type, socials ---------- */
+
+.hero__layout {
+  --pad: clamp(0.75rem, 4.5cqmin, 2.75rem);
+  --gap: clamp(0.75rem, 3cqmin, 2rem);
+  --soc-icon: clamp(1.75rem, 5.5cqmin, 2.25rem);
+  --soc-h: calc(var(--soc-icon) + 0.875rem);
+  /* width the text can use; landscape stages subtract the photo column */
+  --text-w: calc(100cqw - 2 * var(--pad));
+  --title-cap: 6.5cqh;
+
+  position: relative;
+  box-sizing: border-box;
+  display: grid;
+  width: 100%;
+  height: 100%;
+  padding: var(--pad);
+}
+
+.hero__intro,
+.hero__sub {
+  min-width: 0;
+  text-align: var(--text-align);
+  justify-self: var(--text-self);
+  text-shadow:
+    0 1px 2px rgb(0 0 0 / 0.6),
+    0 4px 14px rgb(0 0 0 / 0.35);
+}
+
+.hero__greeting {
+  margin: 0 0 0.2em;
+  font-size: clamp(0.8125rem, calc(var(--text-w) * 0.036), 1.125rem);
+  font-weight: 500;
+}
+
+.hero__title {
+  margin: 0;
+  font-size: clamp(1.375rem, min(calc(var(--text-w) * var(--k, 0.07)), var(--title-cap)), 3.5rem);
+  font-weight: 700;
+  line-height: 1.12;
+  overflow-wrap: break-word;
+}
+
+.hero__sub {
+  margin: 0;
+  max-width: min(100%, 34rem);
+  font-size: clamp(0.75rem, min(calc(var(--text-w) * 0.036), 3.4cqh), 1.25rem);
+  line-height: 1.4;
+}
+
+.hero__photo {
+  min-width: 0;
+  min-height: 0;
+  margin: 0;
+}
+
+.hero__photo img {
+  display: block;
+}
+
+.hero__socials {
+  --dir: row;
+  z-index: 1;
+  display: flex;
+  flex-direction: var(--dir);
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* `data-compact` is the row every stage can afford; tall landscape stages may switch to a column below */
+.hero__socials[data-compact='row-reverse'] {
+  --dir: row-reverse;
+}
+
+.hero__socials-list {
+  display: flex;
+  flex-direction: var(--dir);
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.hero__socials-line {
+  flex: none;
+  width: 2rem;
+  height: 1px;
+  background: var(--color-accent);
+}
+
+.hero__social-link {
+  display: block;
+  transition: transform 0.2s;
+}
+.hero__social-link:hover {
+  transform: scale(1.2);
+}
+.hero__social-link img {
+  display: block;
+  width: var(--soc-icon);
+  height: var(--soc-icon);
+}
+
+/* ---------- portrait stage: one column of rows ---------- */
+
+@container hero (aspect-ratio < 1) {
+  .hero__layout {
+    --text-align: center;
+    --text-self: center;
+    --photo-x: center;
+
+    grid-template-columns: minmax(0, 1fr);
+    /* socials | headline | subheadline | photo | socials */
+    grid-template-rows: auto auto auto minmax(min(30cqh, 15rem), 1fr) auto;
+  }
+  /* socials | headline | photo | subheadline | socials */
+  .hero__layout[data-portrait='sandwich'] {
+    grid-template-rows: auto auto minmax(min(30cqh, 15rem), 1fr) auto auto;
+  }
+
+  .hero__layout[data-portrait-text='left'] {
+    --text-align: left;
+    --text-self: start;
+  }
+  .hero__layout[data-portrait-text='right'] {
+    --text-align: right;
+    --text-self: end;
+  }
+  .hero__layout[data-portrait-photo='left'] {
+    --photo-x: left;
+  }
+  .hero__layout[data-portrait-photo='right'] {
+    --photo-x: right;
+  }
+
+  /* the wrapper only matters on landscape stages; here its children are the grid items */
+  .hero__text {
+    display: contents;
+  }
+
+  .hero__intro,
+  .hero__sub,
+  .hero__photo,
+  .hero__socials {
+    grid-column: 1;
+  }
+
+  .hero__intro {
+    grid-row: 2;
+    padding-bottom: calc(var(--gap) * 0.6);
+  }
+  .hero__sub {
+    grid-row: 3;
+    padding-bottom: calc(var(--gap) * 0.6);
+  }
+  .hero__photo {
+    grid-row: 4;
+  }
+  .hero__layout[data-portrait='sandwich'] .hero__sub {
+    grid-row: 4;
+  }
+  .hero__layout[data-portrait='sandwich'] .hero__photo {
+    grid-row: 3;
+  }
+
+  /* A cut-off shot sits on the bottom edge of the stage. */
+  .hero__layout[data-fit='flush'] .hero__photo {
+    grid-row: 4 / 6;
+    margin-bottom: calc(var(--pad) * -1);
+  }
+
+  .hero__photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: var(--photo-x) center;
+  }
+  .hero__layout[data-fit='flush'] .hero__photo img {
+    object-position: var(--photo-x) bottom;
+  }
+
+  /* socials: a plain row above / below the content */
+  .hero__socials {
+    grid-row: 1;
+    justify-self: start;
+    padding-block: 0.25rem 0.5rem;
+  }
+  .hero__layout[data-soc-v='bottom'] .hero__socials {
+    grid-row: 5;
+    padding-block: 0.5rem 0.25rem;
+  }
+  .hero__layout[data-soc-h='right'] .hero__socials {
+    justify-self: end;
+  }
+}
+
+/* ---------- landscape stage: photo column + text column ---------- */
+
+@container hero (aspect-ratio >= 1) {
+  .hero__layout {
+    --gap-x: clamp(1rem, 4cqw, 3.5rem);
+    --title-cap: 10.5cqh;
+    --text-align: left;
+    --text-self: start;
+    --photo-reserve: 0px;
+    /* photo height: what the stage allows, but never wider than its share */
+    --ph-h: calc(100cqh - 2 * var(--pad) - var(--photo-reserve));
+    --ph-w: calc((100cqw - 2 * var(--pad)) * var(--pmw, 0.45) / var(--ar, 1));
+    --ph: min(var(--ph-h), var(--ph-w));
+    --photo-w: calc(var(--ph) * var(--ar, 1));
+    --text-w: calc(100cqw - 2 * var(--pad) - var(--photo-w) - var(--gap-x));
+
+    column-gap: var(--gap-x);
+    /* socials | text block + photo | socials */
+    grid-template-rows: auto minmax(0, 1fr) auto;
+  }
+
+  .hero__layout[data-fit='flush'] {
+    --ph-h: calc(100cqh - var(--pad));
+  }
+  /* a framed photo gives up the row its socials use; a flush photo runs to the edge and the socials sit on it */
+  .hero__layout[data-fit='framed'][data-soc-in='photo'] {
+    --photo-reserve: var(--soc-h);
+  }
+
+  .hero__layout[data-side='left'] {
+    grid-template-columns: auto minmax(0, 1fr);
+    --photo-col: 1;
+    --text-col: 2;
+    --text-align: right;
+    --text-self: end;
+  }
+  .hero__layout[data-side='right'] {
+    grid-template-columns: minmax(0, 1fr) auto;
+    --photo-col: 2;
+    --text-col: 1;
+  }
+
+  .hero__photo {
+    grid-column: var(--photo-col);
+    grid-row: 1 / -1;
+    align-self: center;
+  }
+  .hero__layout[data-fit='flush'] .hero__photo {
+    align-self: end;
+    margin-bottom: calc(var(--pad) * -1);
+  }
+  .hero__photo img {
+    width: var(--photo-w);
+    height: var(--ph);
+  }
+
+  /* headline + subheadline form one block, centred in the text column */
+  .hero__text {
+    grid-column: var(--text-col);
+    grid-row: 1 / -1;
+    align-self: stretch;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    min-width: 0;
+  }
+  .hero__intro {
+    align-self: end;
+    width: 100%;
+  }
+  .hero__sub {
+    align-self: start;
+    padding-top: clamp(0.625rem, 2.6cqh, 1.5rem);
+  }
+
+  /* socials in the text column: the block is centred in the space they leave free */
+  .hero__layout[data-soc-in='text'][data-soc-v='top'] .hero__text {
+    grid-row: 2 / -1;
+  }
+  .hero__layout[data-soc-in='text'][data-soc-v='bottom'] .hero__text {
+    grid-row: 1 / 3;
+  }
+  /* socials in the photo column: they take the row the picture gives up */
+  .hero__layout[data-fit='framed'][data-soc-in='photo'][data-soc-v='bottom'] .hero__photo {
+    grid-row: 1 / 3;
+  }
+  .hero__layout[data-fit='framed'][data-soc-in='photo'][data-soc-v='top'] .hero__photo {
+    grid-row: 2 / -1;
+  }
+
+  .hero__socials {
+    grid-column: var(--text-col);
+    grid-row: 1;
+    align-self: center;
+    /* shrink to its content and sit in its corner instead of stretching across the column */
+    justify-self: start;
+    padding-block: 0 0.75rem;
+  }
+  .hero__layout[data-soc-h='right'] .hero__socials {
+    justify-self: end;
+  }
+  .hero__layout[data-soc-v='bottom'] .hero__socials {
+    grid-row: 3;
+    padding-block: 0.75rem 0;
+  }
+  .hero__layout[data-soc-in='photo'] .hero__socials {
+    grid-column: var(--photo-col);
+  }
+  .hero__layout[data-fit='framed'][data-soc-in='photo'] .hero__socials {
+    justify-self: center;
+  }
+
+  /* vertical strip laid over the photo's outer corner */
+  .hero__layout[data-soc-in='overlay'] .hero__socials {
+    position: absolute;
+    /* an absolutely positioned grid item is placed against its grid area */
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    padding: 0;
+    left: var(--pad);
+    bottom: var(--pad);
+  }
+  .hero__layout[data-soc-in='overlay'][data-soc-v='top'] .hero__socials {
+    top: var(--pad);
+    bottom: auto;
+  }
+  .hero__layout[data-soc-in='overlay'][data-soc-h='right'] .hero__socials {
+    left: auto;
+    right: var(--pad);
+  }
+}
+
+/*
+ * With enough height, reserve the same room above and below the text block so
+ * it is centred on the stage itself, not just on the space the socials leave.
+ */
+@container hero (aspect-ratio >= 1) and (min-height: 24rem) {
+  .hero__layout[data-soc-in='text'] {
+    grid-template-rows: minmax(var(--soc-h), auto) minmax(0, 1fr) minmax(var(--soc-h), auto);
+  }
+  .hero__layout[data-soc-in='text'][data-soc-v] .hero__text {
+    grid-row: 2;
+  }
+}
+
+/*
+ * Vertical socials strips need height. Only landscape stages taller than 21rem
+ * get one; everywhere else (portrait, short landscape) the socials stay a row
+ * in the direction chosen by data-compact.
+ */
+@container hero (aspect-ratio >= 1) and (height > 21rem) {
+  .hero__socials[data-direction='col'] {
+    --dir: column;
+  }
+  .hero__socials[data-direction='col-reverse'] {
+    --dir: column-reverse;
+  }
+  .hero__socials[data-direction='col'] .hero__socials-line,
+  .hero__socials[data-direction='col-reverse'] .hero__socials-line {
+    width: 1px;
+    height: 2rem;
+  }
+}

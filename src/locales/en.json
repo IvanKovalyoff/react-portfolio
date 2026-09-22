@@ -1,0 +1,170 @@
+{
+  "meta": {
+    "title": "Ivan Kovalov — Full-Stack Developer (React, Next.js, Node.js)",
+    "description": "Portfolio of Ivan Kovalov — Full-Stack Developer (React, Next.js, TypeScript, Node.js) and career changer from the meat-processing industry. 8 shipped projects, based in Poland."
+  },
+  "projects": {
+    "landingPage": {
+      "name": "HTML+SCSS Landing Page",
+      "description": "This was one of my first projects, built using HTML structure and SCSS styling for a web page. Creating it was inspiring for my further development and became a real visualization of the first knowledge I gained."
+    },
+    "game2048": {
+      "name": "2048 Game",
+      "description": "This was a fairly challenging project for me, one that revealed the power of JavaScript and how essential it is for building logic in applications. It helped uncover the 'behind the scenes' of the seemingly simple 2048 game, which actually requires solid skills with JavaScript tools to build."
+    },
+    "gadgetStore": {
+      "name": "Gadget-Store",
+      "description": "A complete frontend project for an online mobile gadget store, which took me a lot of time to build — but also opened up a whole new set of tools and the incredible 'magic' of the React framework."
+    },
+    "chatAppInitialAttempt": {
+      "name": "Chat-app",
+      "description": "This project was planned as a real-time messaging app, combining a frontend built with React + TypeScript + Zustand + TailwindCSS with a backend built using Node.js + Socket.IO + JWT + PostgreSQL. At the time, it was such a difficult and massive project with so many new technologies that I was forced to set it aside for a while, wanting to get a better grasp of the technologies involved first."
+    },
+    "tailwindFestival": {
+      "name": "TW:MF — Music Festival Website",
+      "description": "This project showed me how fast and easy styling can be with TailwindCSS, giving me a broader understanding of the technology and helping me use it more confidently going forward."
+    },
+    "brogram": {
+      "name": "Brogram",
+      "description": "This project helped me deepen my React knowledge and practice my skills. A genuinely fun idea too — building a real, usable app using only the frontend."
+    },
+    "ivkoffStore": {
+      "summary": "E-commerce store with Stripe checkout and order e-mails sent via Resend.",
+      "name": "IvKoff-Store",
+      "description": "This incredible project was my introduction to the NextJS framework, which for some reason used to intimidate me — maybe because getting to grips with React itself had already been a challenge. But once I understood that this framework is an extended, improved continuation of React, I managed to build this great project and expand the list of technologies that genuinely simplify and support development."
+    },
+    "expenny": {
+      "summary": "Subscription tracker built with Next.js and Firebase, animated with GSAP.",
+      "name": "Expenny",
+      "description": "This project helped me practice and expand my NextJS knowledge, and also taught me to work with a new database, Firebase — which genuinely had a positive impact on raising my level as a developer."
+    },
+    "chatAppCompleted": {
+      "summary": "Full-stack real-time chat: JWT and Google OAuth sign-in, persistent history and live typing indicators.",
+      "name": "Chat-app",
+      "description": "Without a doubt my hardest and most ambitious project, and the one I'm proudest of today. Here I tried to apply the maximum of everything I'd learned from several sources and finally turn it into a working project. It's not fully user-oriented yet, but it has great potential for further improvement and use."
+    }
+  },
+
+  "courses": {
+    "frontEnd": {
+      "title": "Front-End Developer",
+      "introduction": "This course was the first step into the digital world of programming. For me, it became the key to a new 'digital universe,' with all its unexpected opportunities and difficulties.",
+      "conclusion": "This course was where I took my first steps into the world of programming. It helped build a strong foundation for growth in this direction. The course isn't finished yet — thanks to the Mate Academy team's efforts to keep pace with technology, it keeps expanding, making sure nothing significant from the world of development gets missed."
+    },
+    "fullStackMate": {
+      "title": "Full-Stack Developer",
+      "introduction": "This was the main course I set out to master — obviously a very broad direction, one that included Front-End development. So studying this course was an expansion of my potential as a developer.",
+      "conclusion": "Through this course, I discovered the back-end side of web development, understood environment setup scripts and Node.js functionality, and deepened my knowledge of programming using OOP and TDD. This course also isn't finished yet — it still includes a few topics I haven't covered, and it's constantly kept up to date by the Mate Academy team so students always have the most current learning materials."
+    },
+    "tailwind": {
+      "title": "Tailwind CSS v4 — Beginner to Pro by Tom Phillips",
+      "introduction": "I found this course on the Udemy learning platform. Reading its description, I realized I needed it to master a new, frequently-used styling technology in modern projects: Tailwind CSS.",
+      "conclusion": "I finished this course satisfied — it genuinely helped me pick up a new technology and speed up my development process. So, ⭐⭐⭐⭐⭐ for this course and for Tom Phillips."
+    },
+    "smoljames": {
+      "title": "Full Stack Course | Build & Deploy by James McArthur",
+      "introduction": "I also found this course on Udemy. From its description, I understood I could not only strengthen my portfolio, but also get familiar with a new framework and a whole set of new services and technologies.",
+      "conclusion": "This course actually exceeded my expectations — James McArthur's clear teaching style helped me both organize the knowledge I already had and pick up new knowledge. So, ⭐⭐⭐⭐⭐ for this course and for James McArthur."
+    },
+    "fullStackMateResolved": {
+      "title": "Full-Stack Developer at Mate Academy",
+      "introduction": "After a bit of a reset, organizing and expanding my knowledge, I came back to the most challenging project I'd left unfinished — confident I could complete it this time.",
+      "conclusion": "Finishing this project confirmed that the knowledge and practice I gained at Mate Academy are the key to achieving the goals I set for myself."
+    },
+    "nextjsAdvanced": {
+      "title": "React + NextJS — Advanced Web Development in Practice by Aleksandr Borkun",
+      "introduction": "I found this course on Udemy, promising to deepen and refine my React + NextJS skills — a priority for me in solidifying my stack.",
+      "conclusion": ""
+    }
+  },
+
+  "complexCourses": {
+    "mateAcademy": {
+      "title": "Mate Academy",
+      "introduction": "After finally deciding to change my life completely... setting goals and direction... I started studying at Mate Academy, believing I could become a Full-Stack developer. And so I began this challenging path, discovering this new and almost magical world of web development.",
+      "conclusion": "Studying at Mate Academy gave me a genuinely strong foundation of knowledge and skills, without which my further growth simply wouldn't be possible. Watching now how the Mate Academy team keeps pace with the rapid evolution of technology, constantly updating and improving their program, I can't help but give ⭐⭐⭐⭐⭐ for all their work and achievements."
+    }
+  },
+
+  "myProjects": {
+    "liveLabel": "Live",
+    "githubLabel": "GitHub",
+    "progressLabel": "{{progress}}% complete",
+    "inProgress": "No projects yet — course in progress.",
+    "futurePlansTitle": "What's Next",
+    "featuredTitle": "Featured projects",
+    "featuredIntro": "My three most complete projects, which best showcase my skills. The timeline below shows the path I took to build them.",
+    "timelineTitle": "My learning path",
+    "screenshotAlt": "Screenshot of {{name}}"
+  },
+
+  "studyingProcess": {
+    "futurePlans": "Looking ahead, I plan to deepen my backend knowledge and learn the NestJS framework through an extended Backend course that includes the following Udemy courses: 1. \"Master Node JS & Deno.js, build REST APIs with Node.js, GraphQL APIs, add Authentication, use MongoDB, SQL & much more!\" by Academind (Maximilian Schwarzmüller). 2. \"Build full featured backend APIs incredibly quickly with Nest, TypeORM, and Typescript. Includes testing and deployment!\" by Stephen Grider. 3. \"REST API vs GraphQL vs gRPC - The Complete Guide\" by Memi Lavi. After that, I'll practice and expand my TDD skills with the courses \"Testing Next.js Apps with Jest, Testing Library and Cypress\" by Bonnie Schulkin and \"Learn Playwright, Cypress, Puppeteer, TestCafe and Taiko side by side — Cursor, AI agents and Playwright MCP.\" by Kaniel Outis. Then I'll return to frontend at Mate Academy to complete the VueJS and Angular modules."
+  },
+
+  "game": {
+    "playPrompt": "Play a game?",
+    "countdown": "Get ready... {{seconds}}",
+    "themeTimeLeft": "{{seconds}}s left to decide",
+    "applyTheme": "Apply this theme",
+    "reset": "Reset",
+    "cooldown": "Try again in a few minutes",
+    "cooldownNotification": "Try again in {{minutes}}m {{seconds}}s or reload the page"
+  },
+
+  "header": {
+    "logoAlt": "IvKoff web-development logo",
+    "toggleMenu": "Toggle navigation menu",
+    "skipToContent": "Skip to main content",
+    "nav": {
+      "about": "About Me",
+      "skills": "My Skills",
+      "projects": "My Projects",
+      "contacts": "Contacts"
+    }
+  },
+
+  "hero": {
+    "photoAlt": "Portrait photo",
+    "greeting": "Hello, I am Ivan Kovalov.",
+    "headline": "I am a Full-Stack Developer (Career Changer).",
+    "subheadline": "From 6 years on the line at large meat-processing plants to building real-time chat apps and Stripe checkouts.",
+    "socials": {
+      "phone": "Phone",
+      "email": "Email",
+      "github": "GitHub",
+      "linkedin": "LinkedIn"
+    }
+  },
+
+  "aboutMe": {
+    "title": "About Me",
+    "tagline": "From the Meat-Processing Plant to the Build Pipeline",
+    "description": "For six years, I worked as a professional butcher — a job that demands precision, patience, and staying calm when things get chaotic. Turns out those are exactly the skills that debugging a stack trace demands.\n\nIn 2025, I made an important decision for myself to change careers. Not on a whim — I spent a lot of time figuring out what I actually wanted to build, and landed on software development. Since then, I've spent 1.5 years at Mate Academy, plus additional focused courses (Tailwind CSS, real-time web apps), turning that decision into actual, working code.\n\nI don't have production experience yet. What I do have is 8 shipped projects that get progressively more ambitious: starting with an HTML/SCSS landing page and a 2048 game, moving into full React/Next.js apps with real integrations — Stripe checkout, Firebase auth, GSAP animation — and most recently, a full-stack real-time chat app with WebSockets, PostgreSQL, and OAuth, built end to end.\n\nI'm based in Poland, open to remote work, and looking for the team that gives me my first shot at doing this professionally. I learn fast, I finish what I start, and I'd rather show you the code than tell you about it."
+  },
+
+  "skills": {
+    "title": "My Skills",
+    "categories": {
+      "languages": "Languages",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "database": "Database",
+      "servicesAndApis": "Services & APIs",
+      "design": "Design",
+      "developerTooling": "Developer Tooling",
+      "deploymentAndHosting": "Deployment & Hosting",
+      "testing": "Testing"
+    }
+  },
+
+  "contacts": {
+    "mapTitle": "Map showing Poznań, Poland"
+  },
+
+  "footer": {
+    "logoAlt": "IvKoff web-development logo",
+    "description": "This portfolio was built as a hands-on demonstration of my Object-Oriented Programming and Test-Driven Development skills — from modeling projects and courses as classes to covering them with unit tests.",
+    "copyright": "2026 IvKoff. All rights reserved."
+  }
+}
