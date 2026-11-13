@@ -92,9 +92,18 @@ const chatAppCompleted: Project = {
   name: 'projects.chatAppCompleted.name',
   description: 'projects.chatAppCompleted.description',
   summary: 'projects.chatAppCompleted.summary',
-  stack: ['TypeScript', 'React', 'Node.js', 'Express', 'Socket.IO', 'PostgreSQL', 'Prisma'],
-  liveUrl: 'https://chat-for-everyone-app.netlify.app',
-  repoUrl: 'https://github.com/IvanKovalyoff/chat-app',
+  stack: [
+    'TypeScript',
+    'React',
+    'Node.js',
+    'Express',
+    'Socket.IO',
+    'PostgreSQL',
+    'Prisma',
+    'Coolify',
+  ],
+  liveUrl: 'https://chat.ivkoff.dev',
+  repoUrl: 'https://github.com/IvanKovalyoff/Chat-app',
   imageUrl: chatApp,
 };
 

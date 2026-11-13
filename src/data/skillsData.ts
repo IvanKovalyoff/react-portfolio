@@ -47,10 +47,14 @@ import dbeaver from '../assets/mySkillsIMG/dbeaver.svg';
 import docker from '../assets/mySkillsIMG/docker.svg';
 import prettier from '../assets/mySkillsIMG/prettier.svg';
 import pnpm from '../assets/mySkillsIMG/pnpm.svg';
+import ubuntu from '../assets/mySkillsIMG/ubuntu.svg';
 
 import netlify from '../assets/mySkillsIMG/netlify.svg';
 import railway from '../assets/mySkillsIMG/railway.svg';
 import githubPages from '../assets/mySkillsIMG/github-pages.svg';
+import coolify from '../assets/mySkillsIMG/coolify.svg';
+import cloudflare from '../assets/mySkillsIMG/cloudflare.svg';
+import contabo from '../assets/mySkillsIMG/contabo.svg';
 
 import jest from '../assets/mySkillsIMG/jest.svg';
 
@@ -123,10 +127,14 @@ addAll(developerTooling, [
   { title: 'Docker', image: docker },
   { title: 'Prettier', image: prettier },
   { title: 'pnpm', image: pnpm },
+  { title: 'Linux (Ubuntu)', image: ubuntu },
 ]);
 
 const deploymentAndHosting = new Category('skills.categories.deploymentAndHosting');
 addAll(deploymentAndHosting, [
+  { title: 'Coolify', image: coolify },
+  { title: 'Contabo VPS', image: contabo },
+  { title: 'Cloudflare', image: cloudflare },
   { title: 'Netlify', image: netlify },
   { title: 'Railway', image: railway },
   { title: 'GitHub Pages', image: githubPages },
